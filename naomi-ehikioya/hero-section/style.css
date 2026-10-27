@@ -1,0 +1,33 @@
+:root { --ink:#202022; --purple:#9d00db; --blue:#1687ff; }
+* { box-sizing:border-box; }
+html,body { margin:0; min-height:100%; }
+body { background:#fbfbfe; color:var(--ink); font-family:"DM Sans",Arial,sans-serif; }
+.hero { min-height:100vh; overflow:hidden; position:relative; background:radial-gradient(circle at 100% 9%, rgba(220,215,255,.22), transparent 30%), radial-gradient(circle at 0 57%, rgba(234,232,255,.36), transparent 29%), #fff; }
+.hero::before,.hero::after { content:""; position:absolute; border:1px solid rgba(201,197,255,.18); border-radius:50%; pointer-events:none; }
+.hero::before { width:740px; height:340px; top:-170px; right:-55px; transform:rotate(-16deg); }
+.hero::after { width:620px; height:320px; top:-140px; right:80px; transform:rotate(-16deg); }
+.site-header { width:min(100% - 80px, 1150px); margin:auto; height:40px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:1; }
+.brand { color:#222; font-size:9px; font-weight:700; letter-spacing:.2px; text-decoration:none; }
+.brand span { color:var(--purple); }
+.nav { display:flex; align-items:center; gap:27px; }
+.nav a { color:#111; font-size:6px; text-decoration:none; }
+.nav .login { border:1px solid #9e52fa; border-radius:20px; color:#8a21dc; font-size:7px; padding:5px 13px; }
+.intro { text-align:center; padding:8px 20px 13px; position:relative; z-index:1; }
+.eyebrow { color:#a800df; font-size:7px; font-weight:700; letter-spacing:2.1px; margin:0 0 17px; }
+h1 { font-family:"Playfair Display",Georgia,serif; font-size:clamp(33px,4.6vw,52px); line-height:1.03; letter-spacing:-1.7px; margin:0; }
+.description { color:#777; font-family:Georgia,serif; font-size:8px; line-height:1.35; margin:12px 0 13px; }
+.cta { background:linear-gradient(90deg,#1886ff,#a000d9); border-radius:20px; color:white; display:inline-flex; gap:9px; align-items:center; font-size:7px; font-weight:700; padding:10px 17px; text-decoration:none; box-shadow:0 6px 17px rgba(80,97,255,.22); }
+.cta span { font-size:11px; line-height:0; }
+.poster-strip { display:grid; grid-template-columns:1fr 2.55fr 2.6fr 2.3fr 1.5fr; gap:7px; height:clamp(160px,31vw,250px); margin-top:0; transform:rotate(1.8deg) scale(1.04); transform-origin:center bottom; }
+.poster { background-position:center; background-size:cover; min-width:0; position:relative; }
+.poster-one { background-image:url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=650&q=85"); background-position:58% center; }
+.poster-two { background-image:url("https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=900&q=85"); }
+.poster-three { background-image:url("https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=85"); display:flex; justify-content:center; align-items:end; }
+.poster-three::after { content:""; inset:0; position:absolute; background:linear-gradient(transparent 55%,rgba(0,0,0,.55)); }
+.poster-three div { color:white; display:grid; gap:2px; position:relative; z-index:1; text-align:center; padding-bottom:14px; }
+.poster-three small { font-size:7px; letter-spacing:1px; }
+.poster-three strong { font-family:Georgia,serif; font-size:16px; letter-spacing:.4px; }
+.poster-four { background-image:url("https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=800&q=85"); }
+.poster-five { background-image:url("https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=500&q=85"); background-position:80% center; }
+.poster-caption { align-self:flex-end; color:#fff; font-family:Georgia,serif; font-size:8px; font-weight:700; line-height:1.05; padding:0 5px 13px; text-align:center; text-shadow:0 1px 4px #222; }
+@media (max-width:640px) { .site-header { width:calc(100% - 32px); } .nav { gap:12px; } .nav a:not(.login) { display:none; } .intro { padding-top:28px; } h1 { font-size:36px; } .description { font-size:9px; } .desktop-break { display:none; } .poster-strip { height:210px; grid-template-columns:1fr 2.15fr 2fr; gap:4px; } .poster-four,.poster-five { display:none; } }
